@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather Astrology</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="intro">
+    <img src="images/crystal-ball.png" alt="">
+    <h1>Astrology Weather APP</h1>
+    <h3>This is how it works.</h3>
+  </div>
+
+  <div class="answer">
+    <h2 class="weatherDescription">The weather is curently...</h2>
+    <h2 class="temperatureDegree"> <%= Temperature %> </h2>
+    <img class="" src="images/sun.png" alt="" id="weatherIcon">
+    <h2>Your Reading:</h2>
+    <P class="yourHoroscope">
+      Here Is your Reading
+    </P>
+  </div>
+
+  <form class="" action="/" method="post">
+    <div class="customFeild">
+      <label for="cityInput" class="placeholder">City Name</label>
+      <input id="cityInput" type="text" required="required" name="cityName">
+      <label for="astroSign" class="placeholder">Your Sign</label>
+      <input id="astroSign" type="text" required="required" name="astroName">
+      <button type="submit">Go</button>
+    </div>
+  </form>
+
+
+
+
+</body>
+
+</html>
