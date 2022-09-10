@@ -21,7 +21,7 @@
 
     <fieldset>
       <form class="" action="/" method="post">
-        <input type="text" class="form-control" name="cityName" placeholder="City Name" required>
+        <input type="text" class="ghost-input" name="cityName" placeholder="City Name" required>
         <input type="text" class="ghost-input" name="astroName" placeholder="Your Sign" required>
         <input type="submit" class="ghost-button" value="Go">
       </form>
@@ -31,16 +31,16 @@
         <h2> <%= place %> </h2>
         <h2 class="">The weather is curently... <%= description %> </h2>
         <h2 class=""> <%= temp %> °C / <%= fahrenheit %>°F</h2>
-        <img class="" src="<%= icon %>" alt="Weather-Icon">
+        <img class="weather-img" src="<%= icon %>" alt="Weather-Icon">
         <h2>Your Reading:</h2>
-        <h2 class=""> <%= reading %> </h2>
+        <p class=""> <%= reading %> </p>
       </div>
       <% } %>
 
       <% if(error !== null){ %>
-      <p>
+      <h3>
         <%= error %>
-      </p>
+      </h3>
       <% } %>
     </fieldset>
   </div>

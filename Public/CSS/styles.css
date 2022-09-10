@@ -29,16 +29,17 @@ fieldset {
   min-width: -webkit-min-content;
   padding: 30px;
 }
-
-.ghost-input,
-p {
-  display: block;
+form {
+  width: 50%;
+  margin: auto;
+}
+.ghost-input {
   font-weight: 300;
-  width: 100%;
+  width: 75%;
   font-size: 25px;
   border: 0px;
   outline: none;
-  width: 100%;
+  width: 75%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -46,7 +47,7 @@ p {
   background: #fff;
   font-family: Open Sans, Verdana;
   padding: 10px 15px;
-  margin: 30px 0px;
+  margin: 10px 0px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -61,9 +62,14 @@ p {
 .ghost-button {
   background-color: transparent;
   border: 2px solid #ddd;
-  padding: 10px 30px;
-  width: 100%;
-  min-width: 350px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  width: 50%;
+  min-width: 150px;
+  font-family: Open Sans, Verdana;
+  font-weight: 300;
+  font-size: 25px;
+  color: #4b545f;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -80,11 +86,19 @@ div {
 }
 
 img {
-  height: 25vh;
+  height: 100px;
+  margin: 15px;
+}
+.weather-img{
+  margin: 0;
 }
 
 h1 {
   color: #533483;
+}
+
+h3{
+
 }
 
 /* .customFeild {
