@@ -15,17 +15,23 @@ app.get("/", function (req, res) {
   res.render("index", {weather: null, error: null});
 });
 
-app.post("/", function (req, res) {
+app.post("/", async function (req, res) {
 
   let city = req.body.cityName;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   let sign = req.body.astroName;
   let astroURL = `https://ohmanda.com/api/horoscope/${sign}/#`;
 
-  const fetchReq1 = fetch(url)
-                      .then((res) => res.json());
-  const fetchReq2 = fetch(astroURL)
-                      .then((res) => res.json());
+  const fetchReq1 = await fetch(url)
+                      .then((res) => res.json())
+                      .catch((error) => {
+                        console.error(error.message)
+                          });
+  const fetchReq2 = await fetch(astroURL)
+                      .then((res) => res.json())
+                      .catch((error) => {
+                        console.error(error.message)
+                          });
 
   const allData = Promise.all([fetchReq1, fetchReq2]);
 
@@ -50,6 +56,10 @@ app.post("/", function (req, res) {
                reading: reading,
                error: null,
              });
+       })
+       .catch((error) => {
+         console.error(error.message);
+         res.render("index", {weather: null, error: 'Error, please try again'});
        });
 });
 
