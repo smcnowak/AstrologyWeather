@@ -19,7 +19,7 @@ app.post("/", async function (req, res) {
 
   let city = req.body.cityName;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  let sign = req.body.astroName;
+  let sign = (req.body.astroName).toLowerCase();
   let astroURL = `https://ohmanda.com/api/horoscope/${sign}/#`;
 
   const fetchReq1 = await fetch(url)
