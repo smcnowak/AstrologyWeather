@@ -3,15 +3,10 @@ body {
   width: auto;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  min-height: 100vh;
+  color: #16213E;
 }
-.special{
-  background-color: #FFF9D7;
-}
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
 fieldset {
   display: block;
   -webkit-margin-start: 0px;
@@ -27,17 +22,29 @@ fieldset {
   border-image-outset: initial;
   border-image-repeat: initial;
   min-width: -webkit-min-content;
-  padding: 30px;
+  padding: 0 30px 10px;
 }
 form {
   width: 50%;
   margin: auto;
+}
+div {
+  text-align: center;
+}
+h1 {
+  color: #533483;
+  font-size: 3rem;
+}
+img {
+  height: 100px;
+  margin: 15px;
 }
 .ghost-input {
   font-weight: 300;
   width: 75%;
   font-size: 25px;
   border: 0px;
+  border-radius: 4px;
   outline: none;
   width: 75%;
   -webkit-box-sizing: border-box;
@@ -54,87 +61,57 @@ form {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-
 .ghost-input:focus {
   border-bottom: 1px solid #ddd;
 }
-
 .ghost-button {
   background-color: transparent;
   border: 2px solid #ddd;
+  border-radius: 4px;
   padding: 10px 15px;
   margin: 10px 0px;
-  width: 50%;
-  min-width: 150px;
+  width: 25%;
+  min-width: 50px;
   font-family: Open Sans, Verdana;
   font-weight: 300;
   font-size: 25px;
-  color: #4b545f;
+  color: #fff;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-
 .ghost-button:hover {
   border: 2px solid #515151;
+  background-color: #16213E;
 }
-
-div {
-  text-align: center;
+.special{
+  background-color: #947EC3;
+  background-image: url("/images/stars.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }
-
-img {
-  height: 100px;
-  margin: 15px;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #947EC3;
+  min-height: 100vh;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
 }
 .weather-img{
   margin: 0;
 }
-
-h1 {
-  color: #533483;
+.temp-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-h3{
-
+.place {
+  font-size: 2rem;
 }
-
-/* .customFeild {
-  font-size: 14px;
-}
-
-input {
-  border: none;
- -webkit-appearance: none;
- -ms-appearance: none;
- -moz-appearance: none;
- appearance: none;
- background: #f2f2f2;
- padding: 12px;
- border-radius: 3px;
- width: 250px;
- font-size: 14px;
-}
-
-input:focus {
-outline: none;
-}
-
-.placeholder {
-  color: #aaa;
-  font-size: 16px;
-}
-
-button {
-  border: none;
-  background: #f2f2f2;
-  padding: 12px;
-  border-radius: 3px;
-  color: #aaa;
-}
-
-button:hover {
-  background: white;
-} */

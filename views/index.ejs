@@ -8,15 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="shortcut icon" href="https://img.icons8.com/office/16/000000/sunset--v2.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body class="special">
   <div class="container">
     <div class="intro">
-      <img src="images/crystal-ball.png" alt="">
       <h1>Astrology Weather APP</h1>
-      <h3>This is how it works.</h3>
+      <img src="images/crystal-ball.png" alt="">
     </div>
 
     <fieldset>
@@ -28,10 +26,12 @@
 
       <%if( weather !== null){ %>
       <div class="answer">
-        <h2> <%= place %> </h2>
-        <h2 class="">The weather is curently... <%= description %> </h2>
-        <h2 class=""> <%= temp %> °C / <%= fahrenheit %>°F</h2>
-        <img class="weather-img" src="<%= icon %>" alt="Weather-Icon">
+        <h2 class="place"> <%= place %> </h2>
+        <h2 class="">The weather is curently... <%= description %>.</h2>
+        <div class="temp-icon">
+          <h2 class=""> <%= temp %> °C / <%= fahrenheit %>°F</h2>
+          <img class="weather-img" src="<%= icon %>" alt="Weather-Icon">
+        </div>
         <h2>Your Reading:</h2>
         <p class=""> <%= reading %> </p>
       </div>
