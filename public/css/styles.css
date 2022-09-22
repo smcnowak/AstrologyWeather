@@ -1,0 +1,117 @@
+
+body {
+  width: auto;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  min-height: 100vh;
+  color: #16213E;
+}
+fieldset {
+  display: block;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0em;
+  -webkit-padding-start: 0em;
+  -webkit-padding-end: 0em;
+  -webkit-padding-after: 0em;
+  border: 0px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  min-width: -webkit-min-content;
+  padding: 0 30px 10px;
+}
+form {
+  width: 50%;
+  margin: auto;
+}
+div {
+  text-align: center;
+}
+h1 {
+  color: #533483;
+  font-size: 3rem;
+}
+img {
+  height: 100px;
+  margin: 15px;
+}
+.ghost-input {
+  font-weight: 300;
+  width: 75%;
+  font-size: 25px;
+  border: 0px;
+  border-radius: 4px;
+  outline: none;
+  width: 75%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #4b545f;
+  background: #fff;
+  font-family: Open Sans, Verdana;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.ghost-input:focus {
+  border-bottom: 1px solid #ddd;
+}
+.ghost-button {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  width: 25%;
+  min-width: 50px;
+  font-family: Open Sans, Verdana;
+  font-weight: 300;
+  font-size: 25px;
+  color: #fff;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.ghost-button:hover {
+  border: 2px solid #515151;
+  background-color: #16213E;
+}
+.special{
+  background-color: #947EC3;
+  background-image: url("/images/stars.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #947EC3;
+  min-height: 100vh;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+.weather-img{
+  margin: 0;
+}
+.temp-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.place {
+  font-size: 2rem;
+}
