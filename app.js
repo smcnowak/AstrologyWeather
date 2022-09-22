@@ -6,6 +6,8 @@ require("dotenv").config();
 
 const apiKey = `${process.env.API_KEY}`;
 
+// here is where problems begin
+
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
