@@ -9,4 +9,4 @@ This project has been developed to better my understanding of **Servers & APIs**
 The project started as a simple weather app, then became more complicated when I decided to add the use of a second API. As I worked through the different ways of making each 
 part work, I had to also master `error handling, Node.js, and EJS`.
 
-### Heroku Hosted webpage link :-https://astrologyweather.herokuapp.com/
+### https://astrologyweather.azurewebsites.net/
