@@ -6,8 +6,6 @@ require("dotenv").config();
 
 const apiKey = `${process.env.API_KEY}`;
 
-// here is where problems begin
-
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -71,5 +69,5 @@ if (port == null || port == "") {
   port = 5000;
 }
 app.listen(port, function(){
-  console.log("Server is running on port 5000.");
+  console.log(`Server is running on port ${port}.`);
 });

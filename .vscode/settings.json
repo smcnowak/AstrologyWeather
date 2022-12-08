@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6d456794-4f48-4561-853f-b9aa55f599dc/AppServices/subscriptions/6d456794-4f48-4561-853f-b9aa55f599dc/resourceGroups/Savannahs-Resources/providers/Microsoft.Web/sites/AstrologyWeather",
+    "appService.deploySubpath": "."
+}
