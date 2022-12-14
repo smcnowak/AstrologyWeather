@@ -1,19 +1,28 @@
+//application dependancies, environment configuration
+
 const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 
 require("dotenv").config();
 
+//OpenWeather personal API key
+
 const apiKey = `${process.env.API_KEY}`;
+
+//express app, body parser, template view engine, static pages
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
+//default display on launch
 
 app.get("/", function (req, res) {
   res.render("index", {weather: null, error: null});
 });
+
+//retreiving data from both apis upon post request using async function
 
 app.post("/", async function (req, res) {
 
@@ -21,6 +30,8 @@ app.post("/", async function (req, res) {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   let sign = (req.body.astroName).toLowerCase();
   let astroURL = `https://ohmanda.com/api/horoscope/${sign}/#`;
+
+  //Error handling and json retreival
 
   const fetchReq1 = await fetch(url)
                       .then((res) => res.json())
@@ -33,8 +44,11 @@ app.post("/", async function (req, res) {
                         console.error(error.message)
                           });
 
+//this makes all the APIs json data availble in the same function
+
   const allData = Promise.all([fetchReq1, fetchReq2]);
 
+//parsing all the json together and rendering results plus more error handling
 
   allData.then((data) => {
       const weather = data[0];
@@ -63,6 +77,7 @@ app.post("/", async function (req, res) {
        });
 });
 
+//are we listening and what port?
 
 let port = process.env.PORT;
 if (port == null || port == "") {
