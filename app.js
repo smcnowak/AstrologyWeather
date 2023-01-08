@@ -1,10 +1,16 @@
 //application dependancies, environment configuration
 
+let appInsights = require('applicationinsights');
 const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 
 require("dotenv").config();
+
+//appinsights setup
+
+appInsights.setup(`${process.env.APPLICATIONINSIGHTS_CONNECTION_STRING}`).start();
+var telemetry = appInsights.defaultClient;
 
 //OpenWeather personal API key
 
@@ -59,7 +65,10 @@ app.post("/", async function (req, res) {
       const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
       const fahrenheit = ((temp *9) /5 +32).toFixed();
       const reading = data[1].horoscope;
-
+//Tracking the API health
+        if (reading.length < 20) {
+          telemetry.trackEvent({name:"LinkBroken"});
+        };
              res.render("index",{
                weather: weather,
                place: place,
